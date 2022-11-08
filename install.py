@@ -24,7 +24,7 @@ import sys
 #                                                                           #
 #---------------------------------------------------------------------------#
 
-if not os.geteuid() == 0:
+if os.geteuid() != 0:
     sys.exit("""\033[1;91m\n[!] Xerosploit installer must be run as root. ¯\_(ツ)_/¯\n\033[1;m""")
 
 print(""" \033[1;36m
